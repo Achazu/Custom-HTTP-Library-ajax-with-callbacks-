@@ -4,7 +4,7 @@ function easyHTTP(){
 }
 
 // CRUD (create, read, update, delete)
-// 1 - make na HTTP POST Request
+// 1 - make an HTTP POST Request
 easyHTTP.prototype.post = function(url, data, callback){
 	this.http.open('POST', url, true);
 	this.http.setRequestHeader('Content-type', 'application/json');
@@ -16,7 +16,7 @@ easyHTTP.prototype.post = function(url, data, callback){
 	this.http.send(JSON.stringify(data));
 }
 
-// 2 - make na HTTP GET Request
+// 2 - make an HTTP GET Request
 easyHTTP.prototype.get = function(url, callback){
 	this.http.open('GET', url, true)
 
@@ -29,7 +29,7 @@ easyHTTP.prototype.get = function(url, callback){
 	}
 	this.http.send()
 }
-// 3 - make na HTTP PUT Request
+// 3 - make an HTTP PUT Request
 
 easyHTTP.prototype.put = function(url, data, callback) {
 	this.http.open('PUT', url, true);
@@ -40,7 +40,7 @@ easyHTTP.prototype.put = function(url, data, callback) {
 	}
 	this.http.send(JSON.stringify(data));
 }
-// 4 - make na HTTP DELETE Request
+// 4 - make an HTTP DELETE Request
 
 easyHTTP.prototype.delete = function(url, callback) {
 	console.log(this)
